@@ -13,17 +13,20 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.3.4",
-    "nuxt-sass-resources-loader": "^2.0.5"
+    "nuxt": "^2.11.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "storyblok-nuxt": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "autoprefixer": "^8.6.4",
-    "tailwindcss": "^0.7.0",
+    "@nuxtjs/vuetify": "^1.10.3",
     "@vue/test-utils": "^1.0.0-beta.27",
+    "autoprefixer": "^8.6.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "tailwindcss": "^0.7.0",
+    "vue-cli-plugin-vuetify": "^2.0.2",
     "vue-jest": "^3.0.2"
   }
 }

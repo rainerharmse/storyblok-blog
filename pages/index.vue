@@ -1,56 +1,27 @@
 <template>
-  <section id="posts">
-    <PostPreview v-for="post in posts" 
-      :key="post.id"
-      :id="post.id"
-      :title="post.title"
-      :excerpt="post.previewText"
-      :thumbnailImage="post.thumbnailUrl"/>
-  </section>
+  <div>
+    <div class="max-w-full bg-grey mx-auto p-4">
+      <div class="text-center mb-4">
+        <img src="~/assets/images/rainer.png" class="w-16" />
+        <div class="w-full bg-red h-12">Minimalist Yachtie</div>
+      </div>
+
+      <!-- Two columns -->
+      <div class="flex mb-4">
+        <div class="w-2/3 bg-red">
+          <h2>About Me</h2>
+          <p>
+            Hi! I’m Adrian. I’m a designer, writer, speaker and coffee
+            enthusiast residing in beautiful Zurich, Switzerland. I help
+            companies create memorable experiences through user centered design.
+            I’m currently design tinkering on a range of AI-first based products
+            such as Google Assistant and Google Lens.
+          </p>
+        </div>
+        <div class="w-1/3 bg-blue">
+          <img src="~/assets/images/rainer.png" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
-
-<script>
-
-import PostPreview from '@/components/Blog/PostPreview'
-
-export default {
-  components:{
-    PostPreview
-  },
-  data(){
-    return{
-      posts:[
-        {
-          id:1,
-          title: 'A new beginning',
-          previewText: 'This will be awesome and its an exceprt',
-          thumbnailUrl: 'http://www.hdfmagazine.com/wp-content/uploads/2014/12/Caroline-Gutman-medium.jpeg'
-        },
-        {
-          id:2,
-          title: 'A SECOND new beginning',
-          previewText: 'This will be awesome and its an exceprt',
-          thumbnailUrl: 'http://www.hdfmagazine.com/wp-content/uploads/2014/12/Caroline-Gutman-medium.jpeg'
-        }
-      ]
-    }
-  }
-}
-</script>
-
-<style scoped>
-  #posts{
-    padding-top: 2rem;
-    display: flex;
-    justify-content: center;
-    margin: 5rem;
-    flex-direction: column
-  }
-
-  @media (min-width: 35rem) {
-      #posts{
-        flex-direction: row;
-        align-items: center;
-      }
-  }
-</style>

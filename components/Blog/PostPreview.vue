@@ -1,8 +1,7 @@
 <template>
-    <nuxt-link 
-      :to="id">
-      <article class="post-preview">
-        <div 
+    <nuxt-link class="post-preview" :to="{ path: '/blog/'+id}">
+      <article>
+        <div
           :style="{ backgroundImage: 'url(' + thumbnailImage + ')'}"
           class="post-preview-thumbnail">
         </div>
@@ -18,7 +17,7 @@
 export default {
     props: {
         id:{
-            type: Number,
+            type: String,
             required:true
         },
         title:{

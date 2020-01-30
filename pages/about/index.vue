@@ -1,6 +1,34 @@
 <template>
     <section id="about-page">
-        <h1>Hi, its Rainer</h1>
-        <p>Im a tech savvy yachtie that loves web development, blogging about what I learn</p>
+        <h1>{{ title }}</h1>
+        <p>{{content}}</p> 
     </section>
 </template>
+
+<script>
+export default {
+    asyncData(context) {
+        return context.app.$storyapi.get('cdn/stories/about', {
+            version: context.isDev ? 'draft' : 'published'
+        })
+        .then(res => {
+            return {
+                title: res.data.story.content.title,
+                content: res.data.story.content.content,
+                data: res.data
+            }
+        })
+    },
+}
+</script>
+
+<style scoped>
+    #about-page{
+        width: 80%;
+        max-width: 500px;
+        margin: auto;
+    }
+     #about-page p{
+         white-space: pre-line;
+     }
+</style>
