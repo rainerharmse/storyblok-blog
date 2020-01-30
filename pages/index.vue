@@ -3,7 +3,7 @@
     <div class="max-w-full bg-grey mx-auto p-4">
       <div class="text-center mb-4">
         <img src="~/assets/images/rainer.png" class="w-16" />
-        <div class="w-full bg-red h-12">Minimalist Yachtie</div>
+        <div class="w-full bg-red h-12">The Minimalist Yachtie</div>
       </div>
 
       <!-- Two columns -->
